@@ -28,7 +28,7 @@ function App() {
 
       <Row style={{ width: '100%', justifyContent: 'center' }}>
         {allFoods
-          .filter((food) => (food.name).toLowerCase().includes(search.toLowerCase()))
+          .filter(food => food.name.toLowerCase().includes(search.toLowerCase()))
           .map((food) => {
             return (
               <div key={food.name}>
