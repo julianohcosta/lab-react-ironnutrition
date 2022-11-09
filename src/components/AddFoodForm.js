@@ -34,6 +34,7 @@ const AddFoodForm = (props) => {
 
 
   function handleChange(event) {
+    console.log(form)
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
@@ -48,7 +49,7 @@ const AddFoodForm = (props) => {
       <Divider>Add Food Entry</Divider>
 
       <label>Name</label>
-      <Input type="text" name="name" />
+      <Input onChange={handleChange} type="text" name="name" />
 
       <label>Image</label>
       <Input onChange={handleChange}  type="text" name="image" />
